@@ -7,19 +7,23 @@ const listForArray = [
     'Latte',
     'Insalata'
 ]; 
+console.log(listForArray);
+
 // lista ciclo while 
 const listWhileArray = [
     'Shampo',
     'Dentifricio',
     'Deodorante'
 ];
+console.log(listWhileArray);
+
 // lista ciclo do while 
 const listDoWhileArray = [
     'Sacchetti',
     'Detersivo',
     'Candeggina'
 ];
-
+console.log(listDoWhileArray);
 
 // INDICHIAMO L'INPUT PER AGGIUNGERE UN PRODOTTO 
 const inputFor = document.getElementById('listForInput');
@@ -53,17 +57,24 @@ for (let iFor = 0; iFor<listForArray.length; iFor++){
 buttonFor.addEventListener('click',
     function(){
         if(listForInput.value != ''){
-            listForArray.push(inputFor).value;
+            listForArray.push(inputFor.value);
             const listElement = document.createElement('li');
             listFor.append(listElement);
             listElement.innerHTML = (inputFor).value;
+            // RISULTATO IN CONSOLE 
+            console.clear();
+            console.log('Lista For');
+            console.log(listForArray);
         }
+        
     }
 )
 buttonDeleteFor.addEventListener('click',
     function(){
         listForArray.length = 0;
         listFor.innerHTML = '';
+        console.clear();
+        console.log('Svuotato array della lista For');
     }
 )
 
@@ -80,10 +91,14 @@ while (iWhile < listWhileArray.length){
 buttonWhile.addEventListener('click',
     function(){
         if(listWhileInput.value != ''){
-            listWhileArray.push(inputWhile).value;
+            listWhileArray.push(inputWhile.value);
             const listElement = document.createElement('li');
             listWhile.append(listElement);
             listElement.innerHTML = (inputWhile).value;
+            // RISULTATO IN CONSOLE 
+            console.clear();
+            console.log('Lista While');
+            console.log(listWhileArray);
         }
     }
 )
@@ -91,6 +106,8 @@ buttonDeleteWhile.addEventListener('click',
     function(){
         listWhileArray.length = 0;
         listWhile.innerHTML = '';
+        console.clear();
+        console.log('Svuotato array della lista While');
     }
 )
 
@@ -107,10 +124,14 @@ do {
 buttonDoWhile.addEventListener('click',
     function(){
         if(listDoWhileInput.value != ''){
-            listDoWhileArray.push(inputDoWhile).value;
+            listDoWhileArray.push(inputDoWhile.value);
             const listElement = document.createElement('li');
             listDoWhile.append(listElement);
             listElement.innerHTML = (inputDoWhile).value;
+            // RISULTATO IN CONSOLE 
+            console.clear();
+            console.log('Lista Do While');
+            console.log(listDoWhileArray);
         }
     }
 )
@@ -118,5 +139,8 @@ buttonDeleteDoWhile.addEventListener('click',
     function(){
         listDoWhileArray.length = 0;
         listDoWhile.innerHTML = '';
+        // RISULTATO IN CONSOLE 
+        console.clear();
+        console.log('Svuotato array della lista Do While');
     }
 )

@@ -3,12 +3,12 @@
 
 # REALIZZAZIONE:
 
-1. Creare la struttura html, css di base delle slide;
+1. Creare la struttura html, css di base;
 
-2. Eliminare la struttura html e css delle slide e rifarla utilizzando js;
+2. Eliminare la struttura html e css e rifarla utilizzando js;
 
-3. far funzionare le slide con js (riferimento all'esercizio di ieri);
+3. creare le liste;
 
-4. creare le liste in ogni differente slide;
+4. fai comparire le liste nell'html;
 
 5. inseriamo un input che permetta l'inserimento di nuovi elementi nella lista;

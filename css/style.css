@@ -9,7 +9,7 @@
 
 /* COMMON */
 body{
-    background-color: rgb(112, 112, 112);
+    background-color: #202123;
 }
 
 li{
@@ -17,11 +17,17 @@ li{
     padding: 10px;
     text-align: center;
     width: 100%;
-    border-bottom: 4px solid rgb(112, 112, 112);
+    border-bottom: 1px solid #000000;
 }
 
 li:last-child{
     border-bottom:none
+}
+
+h2{
+    text-align: center;
+    padding-bottom: 13px;
+    color: white;
 }
 
 /* SLIDE */
@@ -34,6 +40,7 @@ li:last-child{
     align-items: center;
     position: relative;
     gap: 30px;
+    z-index: 1;
 }
 
 ul{
@@ -56,7 +63,7 @@ ul{
 
 .form input{
     width: 100%;
-    height: 40px;
+    height: 50px;
     border-radius: 50px;
     border: none;
     text-align: center;
@@ -69,7 +76,129 @@ ul{
     right: 0;
     height: 100%;
     width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    background-color: transparent;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.757);
 }
+.form .buttonDelete{
+    right: auto;
+    left: 0;
+}
+
+.form button:hover{
+    background-color: rgba(65, 255, 32, 0.478);
+    color: rgb(25, 34, 25);
+}
+
+.form .buttonDelete:hover{
+    background-color: rgba(255, 0, 0, 0.42);
+    color: rgb(25, 34, 25);
+}
+
+
+
+/* ------------------------- */
+/* ---------BONUS----------- */
+/* ------------------------- */
+/* ------------------------- */
+/* --------CUBO 3D---------  */
+/* ------------------------- */
+
+.cube{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: animate 2s ease infinite;
+    z-index: 0;
+}
+
+.cube1{
+    left: 10%;
+    top: 50%;
+}
+
+.cube2{
+    right:10% ;
+    top: 50%;
+}
+
+.cube:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.cube:hover div span{
+    background:linear-gradient(#35383e,#1bff2a);
+}
+
+@keyframes animate{
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#35383e,#192bec);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
+}
+
+.cube .top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: #373a3f;
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.cube .top::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #42445c;
+    transform: translateZ(-140px);
+    filter: blur(30px);
+    box-shadow: 0 0 120px rgba(22, 76, 224, 0.2),
+    0 0 120px rgba(0, 128, 255, 0.4),
+    0 0 120px rgba(0, 85, 255, 0.6),
+    0 0 120px rgba(0, 89, 255, 0.8),
+    0 0 120px rgba(0, 30, 255, 1);
+}
+
+.cube:hover .top::before{
+    box-shadow: 0 0 120px rgba(22, 224, 35, 0.2),
+    0 0 120px rgba(9, 255, 0, 0.4),
+    0 0 120px rgba(0, 255, 30, 0.6),
+    0 0 120px rgba(13, 255, 0, 0.8),
+    0 0 120px rgb(0, 255, 26);
+}
+
+/* ---------------------------- */
+/* /CUBO 3D  */
+/* ---------------------------- */

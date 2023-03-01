@@ -60,7 +60,7 @@ buttonFor.addEventListener('click',
             listForArray.push(inputFor.value);
             const listElement = document.createElement('li');
             listFor.append(listElement);
-            listElement.innerHTML = (inputFor).value;
+            listElement.innerText = (inputFor).value;
             // RISULTATO IN CONSOLE 
             console.clear();
             console.log('Lista For');
@@ -94,7 +94,7 @@ buttonWhile.addEventListener('click',
             listWhileArray.push(inputWhile.value);
             const listElement = document.createElement('li');
             listWhile.append(listElement);
-            listElement.innerHTML = (inputWhile).value;
+            listElement.innerText = (inputWhile).value;
             // RISULTATO IN CONSOLE 
             console.clear();
             console.log('Lista While');
@@ -127,7 +127,7 @@ buttonDoWhile.addEventListener('click',
             listDoWhileArray.push(inputDoWhile.value);
             const listElement = document.createElement('li');
             listDoWhile.append(listElement);
-            listElement.innerHTML = (inputDoWhile).value;
+            listElement.innerText = (inputDoWhile).value;
             // RISULTATO IN CONSOLE 
             console.clear();
             console.log('Lista Do While');
